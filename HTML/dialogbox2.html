@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <h2>There are the following three numbers given below:</h2>
+          <ol type="I">
+                    <li>2000</li>
+                    <li>9000</li>
+                    <li>6000</li>
+          </ol>
+
+          <label for="enter">Enter the Largest number</label>
+          <input type="text">
+          <button onclick="showdialogbox()">Submit</button>
+
+          <script>
+                    
+
+                    function showdialogbox() {
+                              let a=2000;
+                              let b=9000;
+                               c=6000;
+                    
+                              let largest;
+                              if(a>=b && c>=b){
+                                        largest = b;
+                                        alert("Wrong!!!")
+                                        alert("The correct answer is " + largest);
+                              }
+                              else{
+                                        alert("Excellent!!!" + largest + "is the biggest number")
+                              }
+
+                    }
+          </script>
+</body>
+</html>

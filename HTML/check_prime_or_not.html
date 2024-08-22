@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Prime number or not</title>
+</head>
+
+<body>
+          <label for="numberInput">Enter a positive integer:</label>
+          <input type="number" name="" id="numberInput">
+          <button onclick="checkPrime()">Check</button>
+          <p id="result">Result</p>
+
+          <!-- The idea is to find the largest integer i 
+          whose square is less than or equal to the given number. 
+          !-->
+
+          <script>
+                    function Prime(num) {
+                              if (num <= 1) {
+                                        return false;
+                              }
+
+                              for (let i = 2; i <= Math.sqrt(num); i++) {
+                                        if (num % i === 0) {
+                                                  return false;
+                                        }
+                              }
+
+
+                              return true;
+                    }
+
+                    function checkPrime() {
+                              const userinput = document.getElementById("numberInput").value;
+                              const number = parseInt(userinput);
+
+                              if (Prime(number)) {
+                                        document.getElementById("result").textContent = `${number} is a prime number...`;
+                              }
+                              else {
+                                        document.getElementById("result").textContent = `${number} is not a prime number!!!`
+                              }
+                    }
+          </script>
+</body>
+
+</html>
